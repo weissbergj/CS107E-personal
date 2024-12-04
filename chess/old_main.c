@@ -35,7 +35,6 @@
 #include "uart.h"
 
 
-// All global declarations and definitions go here
 typedef struct {
     int from_row;
     int from_col;
@@ -79,8 +78,8 @@ int moves_without_capture = 0;  // For 50-move rule
 
 typedef struct Position {
     char board[8][8];
-    int is_white_turn;  // Add this
-    int move_count;     // Add this to track exact position in game
+    int is_white_turn; 
+    int move_count;     
 } Position;
 
 #define MAX_POSITIONS 100  // Reduce size to ensure it fits in memory
@@ -1166,7 +1165,7 @@ void generate_sliding_moves(char board[8][8], int row, int col, int directions[]
                 moves[*move_count][3] = new_col;
                 (*move_count)++;
                 // Debugging output
-                printf("Generated move: %c%d to %c%d\n", 'a' + col, 8 - row, 'a' + new_col, 8 - new_row);
+                // printf("Generated move: %c%d to %c%d\n", 'a' + col, 8 - row, 'a' + new_col, 8 - new_row);
             } else {
                 if ((is_black_piece(piece) && is_white_piece(board[new_row][new_col])) ||
                     (is_white_piece(piece) && is_black_piece(board[new_row][new_col]))) {
@@ -1176,7 +1175,7 @@ void generate_sliding_moves(char board[8][8], int row, int col, int directions[]
                     moves[*move_count][3] = new_col;
                     (*move_count)++;
                     // Debugging output
-                    printf("Generated capture: %c%d to %c%d\n", 'a' + col, 8 - row, 'a' + new_col, 8 - new_row);
+                    // printf("Generated capture: %c%d to %c%d\n", 'a' + col, 8 - row, 'a' + new_col, 8 - new_row);
                 }
                 break;
             }
@@ -1430,9 +1429,9 @@ int score_move(char board[8][8], int src_row, int src_col,
 // Minimax with alpha-beta pruning
 int minimax(char board[8][8], int depth, int alpha, int beta, int maximizing_player, int current_move_count) {
     g_positions_examined++;
-    if (g_positions_examined > g_max_positions) {
-        return evaluate_board(board, current_move_count);
-    }
+    // if (g_positions_examined > g_max_positions) {
+    //     return evaluate_board(board, current_move_count);
+    // }
 
     int is_checkmate;
     if (is_game_over(board, &is_checkmate, maximizing_player)) {
@@ -1563,7 +1562,7 @@ void find_best_move(char board[8][8], int best_move[4], int is_white) {
     int moves[200][4];
     int move_count = 0;
     int best_score = is_white ? -10000 : 10000;
-    int depth = 4;
+    int depth = 2;
 
     typedef struct {
         int move[4];
@@ -2023,12 +2022,12 @@ void reset_game(void) {
 //     int total_moves = 0;  // Track total moves across all games
     
 //     // Set search parameters
-//     const int SEARCH_DEPTH = 8;  // THIS IS ONLY USED IN find_best_move line 4 ish !!!! ADJUST IT THERE 
-//     g_max_positions = 20000;      // Adjust this for speed vs strength
+//     // const int SEARCH_DEPTH = 8;  // THIS IS ONLY USED IN find_best_move line 4 ish !!!! ADJUST IT THERE 
+//     g_max_positions = 2000000000;      // Adjust this for speed vs strength
     
 //     uart_putstring("Starting AI Self-Play Chess Tournament\n");
 //     uart_putstring("Search depth: ");
-//     printf("%d", SEARCH_DEPTH);
+//     // printf("%d", SEARCH_DEPTH);
 //     uart_putstring(", Max positions: ");
 //     printf("%d\n", g_max_positions);
 //     uart_putstring("Number of games: ");
@@ -2345,6 +2344,8 @@ void uart_getstring(char *buffer, int length) {
 //     uart_putstring(buffer);
 //     uart_putstring("\n");
 // }
+
+
 
 void main(void) {
     uart_init();
