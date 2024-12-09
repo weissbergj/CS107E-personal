@@ -240,30 +240,33 @@ static void navigate_history_down(InputState *state) {
 
 Dear Prospective 107e Students,
 
+This is a general letter about computer science at Stanford, 107e versus 107, style, and life choices. 
+I hope it helps you on your programming journey.
+
 If you are familiar with 107’s content—program execution, C programming, data representation, memory 
-management, and performance optimization—107 will be slightly less work. 107 is purely declarative 
-knowledge. 107e is procedural, though it lacks rigorous abstract reasoning (as is expected with non-theoretical 
-computer science). Generally, it is more interesting to learn how to work in bare metal environments. Neither 
-is more time-consuming nor easier, though. Both can be done with minimal or maximal effort.
+management, and performance optimization—107 requires less minimal effort. 107 is declarative, while 
+107e is procedural. Neither are theoretical. Generally, it is more interesting to learn how to work in 
+bare metal environments. Neither is more time-consuming nor easier with average effort, but both can be 
+done with minimal or maximal effort.
 
-If you are worried about not having done 106b or even written code in the past, you will be fine as long as you 
-have been exposed to a rigorous treatment of any logical subject (e.g., math, physics, chemistry). In comparison 
-to 161, 103, and 109, this is the only class that should be a university course. Take it over those to learn what 
-you have not from high school statistics or what you cannot Google as readily.
+If you are worried about not having done 106b or even written code in the past, you will be fine as long 
+as you have been exposed to a rigorous treatment of any logical subject (e.g., math, physics, chemistry). 
+Take 107e over 161 (Google algorithms when needed), 103 (high school math), and 109 (high school statistics).
 
-Per style, code is logic. Write code as you think about problems. Do not worry about style. Worry about writing 
-beautiful code, although you may not care enough to take the time for that in all assignments—I cared especially 
-for a select few—so just make it efficient. See Knuth's The Art of Computer Programming. There are some principles 
-in advanced algorithm design (particularly games) and when working with lengthy, complex code bases, but those are 
-not relevant.
+Per style, code is logic. Write code as you think about problems. Worry about writing beautiful code 
+rather than about style, although you may not care enough to take the time for that in all assignments—I 
+cared especially for a select few—so just make it efficient. See Knuth's The Art of Computer Programming. 
+There are some principles in advanced algorithm design (particularly games) and when working with lengthy, 
+complex code bases, but those are not relevant.
 
-My ultimate advice is thus: treat programming (not “computer science”) as an art and intellectual interest rather 
-than a ticket to a software engineering position; focus on courses that treat programming as such; this is the only 
-core class that attempts to do so.
+My ultimate advice is thus: treat programming (not “computer science”) as an art and intellectual 
+interest rather than a ticket to a software engineering position; focus on courses that treat 
+programming as such; this is one of the few core classes that attempts to do so. Approach all of 
+Stanford with this mindset.
 
 Best,
 
 A Former 107e Student
 
-P.S. As additional advice, avoid 231N, 224N, 205L, 229, 103, 109, 161. Consider CS 242, CS 336, Math 230, Physics 330, 
-Stats 300 (although niche), organic/polymer chemistry, and other paper-reading classes. Prerequisites are not needed for any.
+P.S. As additional advice, consider CS 242, CS 336, Math 230, Stats 300 (although niche), and other 
+paper-reading classes over 229, 231N, 224N, etc. Prerequisites are not needed.
